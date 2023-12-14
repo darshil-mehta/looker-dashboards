@@ -61,7 +61,8 @@ For more information on the Block structure and customization, refer to [Looker 
     - Note: ‘Deploy to Production’ will push code to the production branch that is set in the project settings. By default, it will be the ‘main’ branch. If you don’t want to push code to ‘main’ branch, then create your own branch and set it to ‘Git Production Branch Name’ in project settings. Then click on Deploy to Production.
 14. On the Homepage of your Looker instance, navigate to the “LookML dashboards” tab under the “Folders” tab to access and view all the dashboards.
 
-## Installation Steps (Marketplace)
+
+## Installation Steps (Looker Marketplace)
 Currently Block is not published on marketplace, please use steps from getting the block from GitHub Repository.
 
 1. After a successful connection click on the ‘marketplace’ button in the top-right corner.
