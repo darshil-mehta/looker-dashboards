@@ -13,6 +13,7 @@
     fields: [events.event_timestamp_time, events.number_enriched_domain_count]
     filters:
       events.principal__hostname: "-NULL"
+      events.principal__domain__first_seen_time__seconds: NOT NULL
     sorts: [events.event_timestamp_time desc]
     limit: 5000
     column_limit: 5000

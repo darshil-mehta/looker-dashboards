@@ -11,6 +11,8 @@
     explore: events
     type: single_value
     fields: [alert_hostnames.unique_domains]
+    filters:
+      events.principal__domain__first_seen_time__seconds: NOT NULL
     limit: 1000
     custom_color_enabled: true
     show_single_value_title: true
@@ -38,6 +40,7 @@
       events.min_timestamp, events.max_timestamp, events.event_counts]
     filters:
       alert_hostnames.events_principal__hostname: "-NULL,-EMPTY"
+      events.principal__domain__first_seen_time__seconds: NOT NULL
     sorts: [events.max_timestamp desc 0]
     limit: 1000
     column_limit: 50
