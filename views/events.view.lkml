@@ -9,7 +9,7 @@ view: unique_hostname_enriched_with_latest_time {
           events.principal.hostname as events_principal__hostname,
           MAX(events.metadata.event_timestamp.seconds) AS events_event_timestamp_time,
         FROM datalake.events AS events
-        WHERE (events.metadata.log_type = 'DOMAINTOOLS_THREATINTEL') AND (events.principal.hostname IS NOT NULL)
+        WHERE (events.metadata.log_type = 'DOMAINTOOLS_THREATINTEL') AND (events.principal.hostname IS NOT NULL) AND (events.principal.domain.first_seen_time.seconds) IS NOT NULL
         GROUP BY events_principal__hostname;;
   }
   dimension_group: event_timestamp {
