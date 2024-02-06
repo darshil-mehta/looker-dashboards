@@ -2,14 +2,17 @@ project_name: "domaintools_dashboard"
 
 
 constant: CONNECTION_NAME {
+  value: "chronicle"
   export: override_required
 }
 # Enter chronicle url e.g. https://tenant.backstory.chronicle.security
 constant: CHRONICLE_URL {
+  value: "https://crestdatasys.backstory.chronicle.security"
   export: override_required
 }
 # specify cloud function name e.g. "domaintools-testing"
 constant: GOOGLE_CLOUD_FUNCTION_NAME {
+  value: "test-function"
   export: override_required
 }
 # specify cloud function region e.g. "us-central1"
@@ -21,6 +24,7 @@ constant: GOOGLE_CLOUD_FUNCTION_REGION {
 # specify google cloud project id region e.g. "domaintools-project"
 # https://support.google.com/googleapi/answer/7014113?hl=en
 constant: GOOGLE_CLOUD_PROJECT_ID {
+  value: "dtgc-1212"
   export: override_required
 }
 
